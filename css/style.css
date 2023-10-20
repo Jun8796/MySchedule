@@ -1,19 +1,68 @@
-h3 {
-    margin-bottom: 30px;
+@charset "utf-8";
+
+.wrapper{
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
 }
-th {
-    height: 30px;
+#header{
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    margin: 1rem 0 0;
+    /* ↑remは親要素の影響を受けない */
+}
+
+/* カレンダー */
+#calendar{
+    text-align: center;
+    width: 100%;
+}
+table{
+    outline: 2px solid#ddd;
+    border-collapse:collapse;
+    width: 100%;
+}
+th{
+    color: #000;
+}
+th,td{
+    outline:1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 100px;
     text-align: center;
 }
-td {
-    height: 100px;
+td:first-child{
+    color:red;
 }
-.today {
-    background-color: orange;
-}
-th:nth-of-type(1), td:nth-of-type(1) {
-    color: red;
-}
-th:nth-of-type(7),td:nth-of-type(7) {
+
+td:last-child{
     color: blue;
+}
+td.disabled{
+    color: #ccc;
+}
+td.today{
+    background-color: #D65E72;
+    color: #fff;
+}
+#next-prev-button button {
+    cursor: pointer;
+    background: #B78D4A;
+    color: #fff;
+    border: 1px solid #B78D4A;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+#next-prev-button button:hover{
+    background-color: #D4BB92;
+    border-color:#D4BB92;
+}
+#prev{
+    float: left;
+}
+#next{
+    float:right;
 }
